@@ -1,0 +1,176 @@
+:root{
+    --color-01: #fff;
+    --color-02: #000;
+    /*--dark-blue-bb: #2F3349;*/
+    --dark-blue-bb: #002B55;
+    --yellow-bb: #AF7827;
+    --clear-yellow-bb: #fdcb818f;
+
+    --nav-height: 60px;
+    --nav-gap: 25px;
+}
+
+/* - Geral - */
+
+body{
+    background-color: var(--dark-blue-bb);
+}
+
+h2{
+    margin: .6em 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* - Final Geral - */
+
+/* - Botões - */
+.btn-blue{
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--dark-blue-bb);
+    color: var(--color-01);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-blue:active{
+    background-color: var(--yellow-bb);
+    color: var(--dark-blue-bb);
+}
+
+.inscrever{
+    margin-top: 100px !important;
+    padding: 15px 40%;
+}
+/* - Final Botões - */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--nav-height);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--color-01);
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+    gap:var(--nav-gap);
+}
+
+nav .menu-item{
+    text-decoration: none;
+    color: var(--dark-blue-bb);
+    transition: all 0.2s ease;
+}
+
+nav .menu-item:hover{
+    color: var(--yellow-bb);
+    border-bottom: 2px solid #AF7827;
+}
+
+main > .banner{
+    max-width: 100vw;
+}
+main > .banner img{
+    width: 100%;
+}
+
+main > article{
+    max-width: 900px;
+    width: 100%;
+    min-width: 380px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: var(--color-01);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+main > article .pageTitle h1{
+    text-align: center;
+    font-size: 3em;
+    color: var(--yellow-bb);
+}
+
+main > article .subTitle{
+    margin: 1.2em 0;
+    
+}
+
+main > article .gridImages{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+main > article .image{
+    width: 100%;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+main > article .image img{
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+#tabela{
+    width: 50%;
+}
+
+/* - Hoteis - */
+main .hoteis{
+    background-color: var(--yellow-bb);
+    box-shadow: -8px 8px 0 var(--color-02);
+    padding: 45px;
+    border-radius: 15px;
+}
+
+main .hoteis ul{
+    color: var(--color-01);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .hoteis a{
+    color: var(--color-01);
+}
+/* - Final dos Hoteis - */
+
+/* - Modal - */
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top:100px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+}
+
+#closeModal{
+    color: var(--color-01);
+    font-size: 2.5em;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+#imgModal{
+    width: 100%;
+    max-width: 800px;
+    min-width: 380px;
+}
