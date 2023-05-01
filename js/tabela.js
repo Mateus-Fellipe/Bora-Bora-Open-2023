@@ -1,6 +1,10 @@
+const blockWidth = 150;
+const blockHeight = 30;
+const txtSize = 18;
+
 // tamanho da tela
-let width = 200 * 3;
-let height = 26 * 50;
+let width = 3 * blockWidth;
+let height = 26 * blockHeight;
 
 horarios = ["", "8:00 - 8:30","8:30 - 9:00","9:00 - 9:30","9:30 - 10:00","10:00 - 10:30","10:30 - 11:00","11:00 - 11:30","11:30 - 12:00","12:00 - 12:30","12:30 - 13:00","13:00 - 13:30","13:30 - 14:00","14:00 - 14:30","14:30 - 15:00","15:00 - 15:30","15:30 - 16:00","16:00 - 16:30","16:30 - 17:00","17:00 - 17:30","17:30 - 18:00","18:00 - 18:30","18:30 - 19:00","19:00 - 19:30","19:30 - 20:00","20:00 - 20:30"]
 
@@ -55,7 +59,8 @@ dom = [
 containers = []
 
 function setup() {
-	createCanvas(width,height);
+	var myCanvas = createCanvas(width, height);
+    myCanvas.parent("tabelaCanvas");
 
 	var t = 1
 	
@@ -95,8 +100,8 @@ function draw() {
 
 	containers.forEach(e => {
 
-		var w = e[2] * 200;
-		var h = e[3] * 50;
+		var w = e[2] * blockWidth;
+		var h = e[3] * blockHeight;
 		var x = w/e[2] * e[0];
 		var y = h/e[3] * e[1];
 
@@ -107,28 +112,28 @@ function draw() {
 
 function slot(x,y,w,h,txt,clr) {
 
-	var wl = w * 200;
-	var hl = h * 50;
+	var wl = w * blockWidth;
+	var hl = h * blockHeight;
 	var xl = wl/w * x;
 	var yl = hl/h * y;
 
 	fill(clr[0],clr[1],clr[2]);
-	rect(xl,yl,wl-3,hl-3);
+	rect(xl,yl,wl-1,hl-1);
 
 	fill(0);
-	textSize(24);
+	textSize(txtSize);
 	textAlign(CENTER);
 	text(txt, xl+(wl-3)/2, yl + (hl+12)/2);
 }
 
-function getName() {
+function getModName() {
 
 	for (let i = 0; i < containers.length; i++) {
 
 		var e = containers[i];
 
-		var w = e[2] * 200;
-		var h = e[3] * 50;
+		var w = e[2] * blockWidth;
+		var h = e[3] * blockHeight;
 		var x = w/e[2] * e[0];
 		var y = h/e[3] * e[1];
 
@@ -139,7 +144,17 @@ function getName() {
 }
 
 function mouseClicked() {
+
+	// https://live.worldcubeassociation.org/competitions/2542
+	// https://live.worldcubeassociation.org/competitions/2542/rounds/35477
 	
-	console.log(getName());
-	console.log(mouseX,mouseY)
+	switch (getModName()) {
+		case '2x2 1ª':
+			window.open('https://www.google.com', '_blank');
+			break;
+
+		case '2x2 Final':
+			console.log('mama');
+			break;
+	  }
 }

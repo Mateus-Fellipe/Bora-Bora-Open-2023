@@ -1,7 +1,6 @@
 :root{
     --color-01: #fff;
     --color-02: #000;
-    /*--dark-blue-bb: #2F3349;*/
     --dark-blue-bb: #002B55;
     --clear-blue-bb: #adcff0;
     --yellow-bb: #AF7827;
@@ -23,7 +22,13 @@ h2{
 }
 
 a{
-    text-decoration: none;
+    color: var(--dark-blue-bb);
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--yellow-bb);
 }
 
 section{
@@ -88,7 +93,7 @@ main > .banner img{
 main > article{
     max-width: 900px;
     width: 100%;
-    min-width: 380px;
+    min-width: 350px;
     margin: 0 auto;
     padding: 25px;
     background-color: var(--color-01);
@@ -107,39 +112,6 @@ main > article .subTitle{
     
 }
 
-main > article .gridImages{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin: 15px 0;
-}
-
-main > article .image{
-    width: 100%;
-    aspect-ratio: 4/3;
-    cursor: pointer;
-    display: flex;
-    border-radius: 15px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-}
-
-main > article .image img{
-    width: 100%;
-    border-radius: 15px;
-    margin: 0 auto;
-}
-
-#tabela{
-    width: 50%;
-}
-
-main > article .inscricao{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
 /* - Hoteis - */
 main .hoteis{
     padding: 45px;
@@ -149,14 +121,17 @@ main .hoteis{
 main .hoteis ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap:15px;
 }
 
 main .hoteis li{
-    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 main .hoteis a{
     color: var(--dark-blue-bb);
+    font-weight: normal !important;
+    text-decoration: none !important;
 }
 
 main .hoteis a:hover{
@@ -170,6 +145,7 @@ main .hoteis a:visited{
 
 
 /* - Modal - */
+/* 
 #modal{
     display: none;
     position: fixed;
@@ -204,3 +180,22 @@ main .hoteis a:visited{
     min-width: 380px;
     border-radius: 15px;
 }
+*/
+/* - Final Modal - */
+
+
+
+/* - Canva - */
+#tabelaCanvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#defaultCanvas0{
+    display: block;
+    padding-top: 1em;
+    width: 400px !important;
+    height: 800px !important;
+}
+/* - Final Canva - */
