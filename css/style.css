@@ -52,8 +52,10 @@ section{
     color: var(--dark-blue-bb);
 }
 
-.btn-inscricao{
-    padding: 1rem 20rem;
+.btn-blue:hover{
+    text-decoration: none !important;
+    background-color: var(--yellow-bb);
+    color: var(--dark-blue-bb);
 }
 /* - Final Botões - */
 
@@ -110,6 +112,22 @@ main > article .pageTitle h1{
 main > article .subTitle{
     margin: 1.2em 0;
     
+}
+
+footer{
+    border-top: 1px solid rgba(154, 154, 154, 0.176);
+    margin-top: 0.5em;
+}
+
+footer > p {
+    color: var(--color-01);
+    text-align: center;
+    padding: 15px;
+}
+
+footer > p > a{
+    color: var(--color-01);
+    text-decoration: none;
 }
 
 /* - Hoteis - */
